@@ -8,15 +8,16 @@
         <title>Basic dice roller</title>
     </head>
     <body>
+        <button id="darkMode" onclick="dark()">Dark mode</button>
         <h1 id="diceName">D20</h1>
         <div id="diceBoard">
             <div id="dice">
                 <p id="diceNumber">20</p>
                 <img src="images/d20-removebg-preview.png" alt="Dice image">
             </div>
+            <p id="diceTotal">Total: 0</p>
         </div>
-        <input type="text" id="amountOfDice" class="input" placeholder="Enter the amount of dices">
-        <input type="text" id="number" class="input" placeholder="Enter the dice">
+        <input type="text" id="mod" class="input" placeholder="Enter the modifier" value="0">
         <button id="rollButton" onclick="rollDice(), showNumber()">Roll</button>
     </body>
 </html>
