@@ -44,5 +44,15 @@ body {
 
 .dark {
     background-color: rgb(21, 21, 21);
-    color: red;
+    color: rgb(255, 0, 0);
+}
+
+#rollButton {
+    border: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0); 
+}
+#rollButton:hover {
+    box-shadow: 3px 1px gray;
+    transform: scaleX(1.1);
 }
