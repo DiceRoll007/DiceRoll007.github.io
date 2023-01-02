@@ -13,11 +13,12 @@
         <div id="diceBoard">
             <div id="dice" onclick="rollDice(), showNumber()">
                 <p id="diceNumber">20</p>
-                <img src="images/d20-removebg-preview.png" alt="Dice image">
+                <img src="images/d20.png" alt="Dice image" id="diceImg">
             </div>
             <p id="diceTotal">Total: 0</p>
         </div>
         <input type="text" id="mod" class="input" placeholder="Enter the modifier" value="0">
-        <button id="rollButton" onclick="rollDice(), showNumber()">Roll</button>
+        <input type="text" id="changeDice" class="input" placeholder="Enter the dice" value="20">
+        <button id="rollButton" onclick="rollDice(), showNumber(), changeDice()">Roll</button>
     </body>
 </html>
