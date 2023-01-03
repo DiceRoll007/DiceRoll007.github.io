@@ -8,10 +8,9 @@
 }
 #dice img {
     height: 100px;
-    display: block;
-    position: relative;
-    
+    position: relative;  
 }
+
 #dice p {
     position: relative;
     z-index: 2;
@@ -22,11 +21,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 #dice:hover {
-    transform: rotateX(350deg) rotateY(360deg);
-    transition: 1s ease-in-out;
+    transform: perspective(100px) translateZ(30px) rotateX(360deg);
+    transition: 1s ease-in-out ;
+    transform-style: preserve-3d;
 }
 
 #diceTotal {

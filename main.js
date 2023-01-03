@@ -40,7 +40,8 @@ function changeDice(){
         document.getElementById("diceTotal").innerHTML="Total:"+sumMod
     }
     if (takeDice == "12"){
-        document.getElementById("diceImg").src="images/d12.png"
+        var img = document.getElementById("diceImg");
+        img.src = "images/d12.png"
         var diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 12)
         var takeModifier = document.getElementById("mod").value
         var sumMod = parseInt(takeModifier)+diceNumber
