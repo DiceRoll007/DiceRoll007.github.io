@@ -31,15 +31,23 @@
 }
 
 #diceTotal {
-    position:relative;
+    position: relative;
     font-family: liberation-sans;
     font-weight: bold;
     right: -40%;
 }
 
+@media(max-width: 400px){
+    #diceTotal {
+        right: -10%;
+    }
+}
+
 .input {
-    outline: 0; 
+    outline: 0;
     color: rgb(128, 128, 128);
+    border: 1px rgb(0, 0, 0) groove;
+    margin: 1px;
 }
 
 body {
@@ -63,7 +71,21 @@ body {
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0); 
     height: 30px;
+    width: 40px;
+    margin-top: 5px;
 }
 #rollButton:hover {
     transform: scaleX(1.1);
+}
+
+#darkMode {
+    border: none;
+    color: rgb(255, 0, 0);
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+}
+
+#darkMode:hover {
+    transform: scale(1.1);
 }
