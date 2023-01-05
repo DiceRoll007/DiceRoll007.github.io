@@ -18,28 +18,28 @@ function changeDice(){
         var sumMod = parseInt(takeModifier)+parseInt(diceNumber)
         document.getElementById("diceTotal").innerHTML="Total:"+sumMod
     }
-    if (takeDice == "6"){
+    else if(takeDice == "6"){
         document.getElementById("diceImg").src="images/d6.png"
         var diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 6)
         var takeModifier = document.getElementById("mod").value
         var sumMod = parseInt(takeModifier)+diceNumber
         document.getElementById("diceTotal").innerHTML="Total:"+sumMod
     }
-    if (takeDice == "8"){
+    else if(takeDice == "8"){
         document.getElementById("diceImg").src="images/d8.png"
         var diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 8)
         var takeModifier = document.getElementById("mod").value
         var sumMod = parseInt(takeModifier)+diceNumber
         document.getElementById("diceTotal").innerHTML="Total:"+sumMod
     }
-    if (takeDice == "10"){
+    else if(takeDice == "10"){
         document.getElementById("diceImg").src="images/d10.png"
         var diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 10)
         var takeModifier = document.getElementById("mod").value
         var sumMod = parseInt(takeModifier)+diceNumber
         document.getElementById("diceTotal").innerHTML="Total:"+sumMod
     }
-    if (takeDice == "12"){
+    else if(takeDice == "12"){
         var img = document.getElementById("diceImg");
         img.src = "images/d12.png"
         var diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 12)
@@ -47,8 +47,11 @@ function changeDice(){
         var sumMod = parseInt(takeModifier)+diceNumber
         document.getElementById("diceTotal").innerHTML="Total:"+sumMod
     }
-    if (takeDice == "20"){
+    else if(takeDice == "20"){
         document.getElementById("diceImg").src="images/d20.png"
+    }
+    else {
+        alert("You can only take: d4, d6, d8, d10, d12 and d20")
     }
 }
 
