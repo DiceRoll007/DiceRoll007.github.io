@@ -44,6 +44,7 @@
 }
 
 .input {
+    position: relative;
     outline: 0;
     color: rgb(128, 128, 128);
     border: 1px rgb(0, 0, 0) groove;
@@ -72,14 +73,26 @@ body {
 }
 
 #rollButton {
+    position: relative;
     border: 0;
+    border-radius: 10px;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0); 
     height: 30px;
     width: 40px;
     margin-top: 3px;
     margin-left: 5px;
+    right: -140px;
+    top: -70px;
 }
+@media(max-width:400px){
+    #rollButton {
+        position: relative;
+        top: 0px;
+        right: 0;
+    }
+}
+
 #rollButton:hover {
     transform: scaleX(1.1);
 }
