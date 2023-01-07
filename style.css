@@ -66,6 +66,10 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+.dark .diceButton {
+    color: red;
+}
+
 #rollButton {
     border: 0;
     color: rgb(255, 255, 255);
@@ -106,4 +110,10 @@ body {
 #diceButtons {
     display: flex;
     flex-direction: row;
+}
+
+.diceAnimation {
+    transform: perspective(100px) translateZ(30px) rotateX(360deg);
+    transition: 1s ease-in-out ;
+    transform-style: preserve-3d;
 }

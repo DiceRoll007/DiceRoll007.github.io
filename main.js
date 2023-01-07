@@ -2,57 +2,69 @@ function rollDice(a, b){
     return Math.floor(Math.random() * (b - a + 1)) + a
 }
 
-function showNumber(){
-    document.getElementById("diceTotal").innerHTML="Total:"+ sumMod
+let diceValue = 20
+function changeValue(){
+    if (diceValue == 4){
+        diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 4)
+        takeModifier = document.getElementById("mod").value
+        sumMod = parseInt(takeModifier)+parseInt(diceNumber)
+        document.getElementById("diceTotal").innerHTML="Total:"+sumMod
+    }
+    else if (diceValue == 6){
+        diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 6)
+        takeModifier = document.getElementById("mod").value
+        sumMod = parseInt(takeModifier)+diceNumber
+        document.getElementById("diceTotal").innerHTML="Total:"+sumMod
+    }
+    else if (diceValue == 8){
+        diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 8)
+        takeModifier = document.getElementById("mod").value
+        sumMod = parseInt(takeModifier)+diceNumber
+        document.getElementById("diceTotal").innerHTML="Total:"+sumMod
+    }
+    else if (diceValue == 10){
+        diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 10)
+        takeModifier = document.getElementById("mod").value
+        sumMod = parseInt(takeModifier)+diceNumber
+        document.getElementById("diceTotal").innerHTML="Total:"+sumMod
+    }
+    else if (diceValue == 12){
+        diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 12)
+        takeModifier = document.getElementById("mod").value
+        sumMod = parseInt(takeModifier)+diceNumber
+        document.getElementById("diceTotal").innerHTML="Total:"+sumMod
+    }
+    else if (diceValue == 20){
+        diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 20)
+        takeModifier = document.getElementById("mod").value
+        sumMod = parseInt(takeModifier)+parseInt(diceNumber)
+        document.getElementById("diceTotal").innerHTML="Total:"+sumMod
+    }
 }
 
 function d4roll(){
     document.getElementById("diceImg").src="images/d4.png"
-    let diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 4)
-    let takeModifier = document.getElementById("mod").value
-    let sumMod = parseInt(takeModifier)+parseInt(diceNumber)
-    document.getElementById("diceTotal").innerHTML="Total:"+sumMod
+    diceValue = 4
 }
 function d6roll(){
     document.getElementById("diceImg").src="images/d6.png"
-    let diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 6)
-    let takeModifier = document.getElementById("mod").value
-    let sumMod = parseInt(takeModifier)+diceNumber
-    document.getElementById("diceTotal").innerHTML="Total:"+sumMod
-    
+    diceValue = 6  
 }
 function d8roll(){
     document.getElementById("diceImg").src="images/d8.png"
-    let diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 8)
-    let takeModifier = document.getElementById("mod").value
-    let sumMod = parseInt(takeModifier)+diceNumber
-    document.getElementById("diceTotal").innerHTML="Total:"+sumMod
-
+    diceValue = 8
 }
 function d10roll(){
     document.getElementById("diceImg").src="images/d10.png"
-    let diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 10)
-    let takeModifier = document.getElementById("mod").value
-    let sumMod = parseInt(takeModifier)+diceNumber
-    document.getElementById("diceTotal").innerHTML="Total:"+sumMod
-    
+    diceValue = 10
 }
 function d12roll(){
-    var img = document.getElementById("diceImg");
-    img.src = "images/d12.png"
-    let diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 12)
-    let takeModifier = document.getElementById("mod").value
-    let sumMod = parseInt(takeModifier)+diceNumber
-    document.getElementById("diceTotal").innerHTML="Total:"+sumMod
-    
+    document.getElementById("diceImg").src="images/d12.png"
+    diceValue = 12
 }
 function d20roll(){
     document.getElementById("diceImg").src="images/d20.png"
-    let diceNumber = document.getElementById("diceNumber").innerHTML=rollDice(1, 20)
-    let takeModifier = document.getElementById("mod").value
-    let sumMod = parseInt(takeModifier)+parseInt(diceNumber)
-    document.getElementById("diceTotal").innerHTML="Total:"+sumMod
-    
+    diceValue = 20
 }
 
 function dark(){
@@ -61,7 +73,6 @@ function dark(){
     }
 
 function animation(){
-    debugger
     var active = document.querySelector("#dice");
-    active.style="transform: perspective(100px) translateZ(30px) rotateX(360deg);transition: 1s ease-in-out ;transform-style: preserve-3d;;"
+    active.classList.toggle("diceAnimation")
 }
