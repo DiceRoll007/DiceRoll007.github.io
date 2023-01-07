@@ -5,6 +5,7 @@
     background-color: rgb(201, 201, 201);
     border-radius: 10px;
     width: 70%; 
+    height: 200px;
 }
 #dice img {
     height: 100px;
@@ -22,12 +23,6 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-}
-
-#dice:hover {
-    transform: perspective(100px) translateZ(30px) rotateX(360deg);
-    transition: 1s ease-in-out ;
-    transform-style: preserve-3d;
 }
 
 #diceTotal {
@@ -127,7 +122,29 @@ body {
 }
 
 .diceAnimation {
+    display: flex;
+    flex-direction: column;
     transform: perspective(100px) translateZ(30px) rotateX(360deg);
     transition: 1s ease-in-out ;
     transform-style: preserve-3d;
+}
+
+.diceAnimation #diceImg{
+    display: block;
+}
+
+.diceAnimation p {
+    display: block;
+}
+
+.diceRemove #diceImg{
+    display: none;
+}
+
+.diceRemove p {
+    display: none;
+}
+
+.diceRemove + #diceTotal{
+    display: none;
 }

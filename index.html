@@ -11,21 +11,21 @@
         <button id="darkMode" onclick="dark()">Dark mode</button>
         <h1 id="diceName">Dice roller</h1>
         <div id="diceBoard">
-            <div id="dice" onclick="rollDice(), changeValue()">
+            <div id="dice" onclick="removeDice()">
                 <p id="diceNumber"></p>
                 <img src="images/d20.png" alt="Dice image" id="diceImg" class="img">
             </div>
             <p id="diceTotal">Total: 0</p>
         </div>
         <div id="diceButtons">
-        <button type="button" id="d4" class="diceButton" onclick="d4roll(), animation()">d4</button>
-        <button type="button" id="d6" class="diceButton" onclick="d6roll(), animation()">d6</button>
-        <button type="button" id="d8" class="diceButton" onclick="d8roll(), animation()">d8</button>
-        <button type="button" id="d10" class="diceButton" onclick="d10roll(), animation()">d10</button>
-        <button type="button" id="d12" class="diceButton" onclick="d12roll(), animation()">d12</button>
-        <button type="button" id="d20" class="diceButton" onclick="d20roll(), animation()">d20</button>
+        <button type="button" id="d4" class="diceButton" onclick="d4roll(), addDice(), removeAnimation()">d4</button>
+        <button type="button" id="d6" class="diceButton" onclick="d6roll(), addDice(), removeAnimation()">d6</button>
+        <button type="button" id="d8" class="diceButton" onclick="d8roll(), addDice(), removeAnimation()">d8</button>
+        <button type="button" id="d10" class="diceButton" onclick="d10roll(), addDice(), removeAnimation()">d10</button>
+        <button type="button" id="d12" class="diceButton" onclick="d12roll(), addDice(), removeAnimation()">d12</button>
+        <button type="button" id="d20" class="diceButton" onclick="d20roll(), addDice(), removeAnimation()">d20</button>
     </div>
     <input type="text" id="mod" class="input" placeholder="Enter the modifier" value="0">
-    <button id="rollButton" onclick="rollDice(), changeValue(), animation()">Roll</button>
+    <button id="rollButton" onclick="rollDice(), changeValue(), animation(), addDice()">Roll</button>
     </body>
 </html>

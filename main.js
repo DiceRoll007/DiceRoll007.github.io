@@ -73,6 +73,19 @@ function dark(){
     }
 
 function animation(){
-    var active = document.querySelector("#dice");
-    active.classList.toggle("diceAnimation")
+    var takeDice = document.querySelector("#dice");
+    takeDice.classList.add("diceAnimation")
+}
+
+function removeAnimation(){
+    var takeDice = document.querySelector("#dice");
+    takeDice.classList.remove("diceAnimation")
+}
+function removeDice(){
+    var takeDice = document.querySelector("#dice");
+    takeDice.classList.replace("diceAnimation","diceRemove")
+}
+function addDice(){
+    var takeDice = document.querySelector("#dice");
+    takeDice.classList.replace("diceRemove","diceAnimation")
 }
