@@ -137,8 +137,17 @@ body {
     display: block;
 }
 
+@keyframes decrease {
+    to {
+        transform: rotateZ(10deg) rotateY(360deg);
+    }
+}
+
+.diceRemove #diceImg {
+    animation-name: decrease;
+    animation-duration: 1s;
+}
 .diceRemove {
     transform: translateZ(30px) rotateX(deg);
-    transition: 1s;
-    visibility: hidden;
+    transition: 0.5s;
 }
