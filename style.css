@@ -23,6 +23,8 @@
     align-items: center;
     flex-direction: column;
     position: relative;
+    height: 150px;
+    width: 84px;
 }
 
 #diceTotal {
@@ -122,10 +124,8 @@ body {
 }
 
 .diceAnimation {
-    display: flex;
-    flex-direction: column;
     transform: perspective(100px) translateZ(30px) rotateX(360deg);
-    transition: 1s ease-in-out ;
+    transition: 0.6s ease-in-out ;
     transform-style: preserve-3d;
 }
 
@@ -137,14 +137,8 @@ body {
     display: block;
 }
 
-.diceRemove #diceImg{
-    display: none;
-}
-
-.diceRemove p {
-    display: none;
-}
-
-.diceRemove + #diceTotal{
-    display: none;
+.diceRemove {
+    transform: translateZ(30px) rotateX(deg);
+    transition: 1s;
+    visibility: hidden;
 }
